@@ -1,4 +1,4 @@
-package Part2;
+package Module1.Part2;
 
 import java.util.Scanner;
 import static java.lang.Math.*;

@@ -1,4 +1,4 @@
-package Part1;
+package Module1.Part1;
 
 public class Task2_Tree {
     public static void main(String[] args) {

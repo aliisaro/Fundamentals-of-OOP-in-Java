@@ -1,4 +1,4 @@
-package Part1;
+package Module1.Part1;
 
 public class Task1_FixedMessage {
     public static void main(String[] args) {

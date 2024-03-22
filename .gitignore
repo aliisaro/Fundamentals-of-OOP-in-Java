@@ -2,10 +2,11 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-/.idea
+/idea
 
 /External Libraries/
 /Scratches and Consoles
+HelloWorld.iml
 
 ### Eclipse ###
 .apt_generated

@@ -1,4 +1,4 @@
-package Part1;
+package Module1.Part1;
 
 public class Task4_Cats {
     private String name;
