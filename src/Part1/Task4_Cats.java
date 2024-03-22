@@ -1,9 +1,9 @@
 package Part1;
 
-public class Task4 {
+public class Task4_Cats {
     private String name;
 
-    public Task4(String name) {
+    public Task4_Cats(String name) {
         this.name = name;
     }
 
@@ -13,8 +13,8 @@ public class Task4 {
 
     public static void main(String[] args) {
         // Create an instance of the Cat class with a name
-        Task4 cat1 = new Task4("Whiskers");
-        Task4 cat2 = new Task4("Rex");
+        Task4_Cats cat1 = new Task4_Cats("Whiskers");
+        Task4_Cats cat2 = new Task4_Cats("Rex");
 
         // Call the meow method on the cat instance
         cat1.meow();

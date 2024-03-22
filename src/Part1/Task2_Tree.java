@@ -1,8 +1,6 @@
 package Part1;
 
-import java.io.*;
-
-public class Task2 {
+public class Task2_Tree {
     public static void main(String[] args) {
         int x = 3;
         int y = 1;

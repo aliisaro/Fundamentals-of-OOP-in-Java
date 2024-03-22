@@ -3,7 +3,7 @@ package Part2;
 import java.util.Scanner;
 import static java.lang.Math.*;
 
-public class Task2Triangles {
+public class Task2_Triangles {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
