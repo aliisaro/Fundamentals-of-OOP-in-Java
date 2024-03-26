@@ -7,17 +7,14 @@ public class Task1_QuadraticEquationSolver {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give coefficient a:");
+        System.out.print("Give coefficient a:");
         double a = Double.parseDouble(scanner.nextLine());
 
-        System.out.println("Give coefficient b:");
+        System.out.print("Give coefficient b:");
         double b = Double.parseDouble(scanner.nextLine());
 
-        System.out.println("Give constant c:");
+        System.out.print("Give constant c:");
         double c = Double.parseDouble(scanner.nextLine());
-
-        //double x = (-b + sqrt((pow(b,2) - 4*a*c))) / 2*a;
-        //double formula = a*pow(x,2) + b*x + c;
 
         double x = b * b - 4.0 * a * c;
 

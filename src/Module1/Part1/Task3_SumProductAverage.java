@@ -7,13 +7,13 @@ public class Task3_SumProductAverage {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give the first number:");
+        System.out.print("Give the first number:");
         double first = Double.parseDouble(scanner.nextLine());
 
-        System.out.println("Give the second number:");
+        System.out.print("Give the second number:");
         double second = Double.parseDouble(scanner.nextLine());
 
-        System.out.println("Give the third number:");
+        System.out.print("Give the third number:");
         double third = Double.parseDouble(scanner.nextLine());
 
         System.out.println("The sum of the numbers is " + round(first + second + third));
