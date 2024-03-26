@@ -24,6 +24,6 @@ public class Task3_Measurements {
         //luotimäärä pyöristettynä alaspäin 2 desimaalin tarkkuudella
         double luodit = floor(remainder2 / 13.28 * 100.0) / 100;
 
-        System.out.printf(grams + " grammaa on " + round(leiviskät) + " leiviskää, " + round(naulat) + " naulaa ja " + luodit + " luotia.");
+        System.out.printf(grams + " grammaa on: " + round(leiviskät) + " leiviskää, " + round(naulat) + " naulaa ja " + luodit + " luotia.");
     }
 }
