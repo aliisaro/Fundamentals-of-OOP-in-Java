@@ -1,4 +1,4 @@
-package Part4;
+package Module1_FundamentalsOfJava.Part4;
 
 import java.util.Scanner;
 
