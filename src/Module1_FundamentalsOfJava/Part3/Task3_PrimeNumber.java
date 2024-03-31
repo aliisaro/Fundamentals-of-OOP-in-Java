@@ -1,4 +1,4 @@
-package Module1.Part3;
+package Module1_FundamentalsOfJava.Part3;
 
 import java.util.Scanner;
 public class Task3_PrimeNumber {

@@ -1,4 +1,4 @@
-package Module1.Part1;
+package Module1_FundamentalsOfJava.Part1;
 
 import java.util.Scanner;
 import static java.lang.Math.round;
