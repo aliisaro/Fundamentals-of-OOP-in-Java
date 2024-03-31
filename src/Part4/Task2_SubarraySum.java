@@ -22,11 +22,14 @@ public class Task2_SubarraySum {
         int startIndex = 0;
         int endIndex = 0;
 
+        // Iterate through all possible subarrays
         for (int start = 0; start < size; start++) {
             int sum = 0;
             for (int end = start; end < size; end++) {
+                // Calculate the sum of the current subarray
                 sum += numbers[end];
 
+                // Update maximum sum and corresponding indices if necessary
                 if (sum > maxSum) {
                     maxSum = sum;
                     startIndex = start;
@@ -34,6 +37,7 @@ public class Task2_SubarraySum {
                 }
             }
         }
+        // Print the maximum sum and corresponding subarray
         System.out.println("\nMaximum sum: " + maxSum);
         System.out.print("Integers: " + (startIndex+1) + "-" + (endIndex+1));
     }
