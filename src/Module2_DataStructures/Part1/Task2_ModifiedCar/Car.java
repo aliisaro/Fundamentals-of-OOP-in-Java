@@ -1,19 +1,19 @@
-package Module2_DataStructures.Part1;
+package Module2_DataStructures.Part1.Task2_ModifiedCar;
 
-public class Task2_ModifiedCar {
+public class Car {
     private double speed;
     private double gasolineLevel;
     private String typeName;
     private int tankCapacity;
     private int topSpeed;
 
-    public Task2_ModifiedCar(String typeName) {
+    public Car(String typeName) {
         this.typeName = typeName;
         speed = 0;
         gasolineLevel = 0;
     }
 
-    public Task2_ModifiedCar(String typeName, int tankCapacity, int topSpeed) {
+    public Car(String typeName, int tankCapacity, int topSpeed) {
         this(typeName);
         this.tankCapacity = tankCapacity;
         this.topSpeed = topSpeed;
@@ -46,22 +46,3 @@ public class Task2_ModifiedCar {
     }
 }
 
-class CarDriver {
-
-    public static void main(String[] args) {
-        Task2_ModifiedCar myCar;
-
-        myCar = new Task2_ModifiedCar("Toyota Corolla", 60, 200);
-        myCar.fillTank();
-
-        for (int i = 0; i < 6; i++) {
-            myCar.accelerate();
-            System.out.println(myCar.getTypeName() + ": speed is " + myCar.getSpeed() + " km/h");
-        }
-
-        while (myCar.getSpeed() > 0) {
-            myCar.decelerate(15);
-            System.out.println(myCar.getTypeName() + ": speed is " + myCar.getSpeed() + " km/h");
-        }
-    }
-}

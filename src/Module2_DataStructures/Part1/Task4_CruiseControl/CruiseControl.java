@@ -1,6 +1,6 @@
-package Module2_DataStructures.Part1;
+package Module2_DataStructures.Part1.Task4_CruiseControl;
 
-public class Task4_CruiseControl {
+public class CruiseControl {
     private double speed;
     private double topSpeed;
     private double gasolineLevel;
@@ -11,14 +11,14 @@ public class Task4_CruiseControl {
     private double minSpeed;
     private double targetSpeed;
 
-    public Task4_CruiseControl(String typeName) {
+    public CruiseControl(String typeName) {
         this.typeName = typeName;
         speed = 0;
         gasolineLevel = 0;
         cruiseControl = false;
     }
 
-    public Task4_CruiseControl(String typeName, int tankCapacity, double topSpeed, double maxSpeed, double minSpeed) {
+    public CruiseControl(String typeName, int tankCapacity, double topSpeed, double maxSpeed, double minSpeed) {
         this(typeName);
         this.tankCapacity = tankCapacity;
         this.topSpeed = topSpeed;
@@ -92,23 +92,3 @@ public class Task4_CruiseControl {
     }
 }
 
-class CarDriverr {
-    public static void main(String[] args) {
-        Task4_CruiseControl myCar;
-
-        myCar = new Task4_CruiseControl("Toyota Corolla", 60, 200, 100, 70);
-        myCar.fillTank();
-        myCar.setTargetSpeed(80);
-        myCar.toggleCruiseControl();
-
-        for (int i = 0; i < 6; i++) {
-            myCar.accelerate();
-            System.out.println(myCar.getTypeName() + ": speed is " + myCar.getSpeed() + " km/h");
-        }
-
-        while (myCar.getSpeed() > 0) {
-            myCar.decelerate(15);
-            System.out.println(myCar.getTypeName() + ": speed is " + myCar.getSpeed() + " km/h");
-        }
-    }
-}

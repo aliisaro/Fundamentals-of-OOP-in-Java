@@ -1,33 +1,8 @@
-package Module2_DataStructures.Part1;
-
-public class Task1_Television {
-    private int channel;
-    private boolean isOn;
-    public Task1_Television() {
-        channel = 1;
-        isOn = true;
-    }
-
-    public void setChannel(int channel) {
-        this.channel = channel;
-    }
-
-    public int getChannel() {
-        return channel;
-    }
-
-    public boolean isOn() {
-        return isOn;
-    }
-
-    public void pressOnOff() {
-        isOn = !isOn;
-    }
-}
+package Module2_DataStructures.Part1.Task1_Television;
 
 class TelevisionViewer {
     public static void main(String[] args) {
-        Task1_Television myTV = new Task1_Television();
+        Television myTV = new Television();
 
         myTV.setChannel(1);
 
