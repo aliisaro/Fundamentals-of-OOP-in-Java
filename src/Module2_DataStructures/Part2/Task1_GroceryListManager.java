@@ -1,6 +1,7 @@
 package Module2_DataStructures.Part2;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Task1_GroceryListManager {
     private ArrayList<String> groceryList = new ArrayList<>();
@@ -10,18 +11,25 @@ public class Task1_GroceryListManager {
     }
 
     public void removeItem(String item) {
-        System.out.println("\nRemoving " + item + " from the list...");
+        System.out.println("\n\nRemoving '" + item + "' from the list...");
         groceryList.remove(item);
 
     }
 
-    public ArrayList<String> displayList() {
-        return groceryList;
+    public void displayGroceryList() {
+        int i = 1;
+        for (String item : groceryList) {
+            System.out.println(i + ". " + item);
+            i++;
+        }
     }
 
     public void checkItem(String item) {
         boolean hasItem = groceryList.contains(item);
-        System.out.print("\nIs " + item + " in the grocery list? " + hasItem);
+        if (hasItem) {
+            groceryList.remove(item);
+        }
+        System.out.print("\nIs '" + item + "' in the grocery list? " + hasItem);
     }
 
     public static void main(String[] args) {
@@ -31,26 +39,14 @@ public class Task1_GroceryListManager {
         manager.addItem("Milk");
         manager.addItem("Bread");
 
-        System.out.println("Grocery list:");
-        ArrayList<String> groceryList = manager.displayList();
-        int i = 0;
-        for (String item : groceryList) {
-            i++;
-            System.out.println(i + ". " + item);
-        }
+        System.out.println("\nGrocery list:");
+        manager.displayGroceryList();
 
         manager.checkItem("Milk");
-        boolean hasItem = manager.displayList().contains("Milk");
-        if (hasItem) {
-            manager.removeItem("Milk");
-        }
+
+        manager.removeItem("Milk");
 
         System.out.println("\nUpdated Grocery list:");
-        groceryList = manager.displayList();
-        i = 0;
-        for (String item : groceryList) {
-            i++;
-            System.out.println(i + ". " + item);
-        }
+        manager.displayGroceryList();
     }
 }

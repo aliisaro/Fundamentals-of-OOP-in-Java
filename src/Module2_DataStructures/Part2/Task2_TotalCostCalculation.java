@@ -10,61 +10,45 @@ public class Task2_TotalCostCalculation {
         groceryList.put(item, cost);
     }
 
+    public void removeItem(String item) {
+        System.out.println("\nRemoving '" + item + "' from the list...");
+        groceryList.remove(item);
+    }
+
+    public void displayGroceryList() {
+        int i = 1;
+        for (Map.Entry<String, Double> entry : groceryList.entrySet()) {
+            String item = entry.getKey();
+            Double cost = entry.getValue();
+            System.out.println(i + ". " + item + ", " + String.format("%.2f", cost) + "€");
+            i++;
+        }
+    }
+    public void checkItem(String item) {
+        boolean hasItem = groceryList.containsKey(item);
+        if (hasItem) {
+            groceryList.remove(item);
+        }
+        System.out.print("\nIs '" + item + "' in the grocery list? " + hasItem);
+    }
+
     public void calculateTotalCost() {
         double total = 0;
         for (double cost : groceryList.values()) {
             total += cost;
         }
-        System.out.println("\nTotal cost of groceries: " + total + "€");
-    }
-
-    public void removeItem(String item) {
-        System.out.println("\nRemoving " + item + " from the list...");
-        groceryList.remove(item);
-
-    }
-
-    public HashMap<String, Double> displayList() {
-        return groceryList;
-    }
-
-    public void checkItem(String item) {
-        boolean hasItem = groceryList.containsKey(item);
-        System.out.print("\nIs " + item + " in the grocery list? " + hasItem);
+        System.out.println("\nTotal cost of groceries: " + String.format("%.2f", total) + "€");
     }
 
     public static void main(String[] args) {
         Task2_TotalCostCalculation manager = new Task2_TotalCostCalculation();
 
-        manager.addItem("Apple", 1.90);
+        manager.addItem("Apple", 0.3);
         manager.addItem("Milk", 2.5);
         manager.addItem("Bread", 3.0);
 
         System.out.println("Grocery list:");
-        int i = 0;
-        for (Map.Entry<String, Double> entry : manager.displayList().entrySet()) {
-            String item = entry.getKey();
-            double cost = entry.getValue();
-            i++;
-            System.out.println(i + ". " + item + " " + cost + "€");
-        }
-
-        manager.calculateTotalCost();
-
-        manager.checkItem("Milk");
-        boolean hasItem = manager.displayList().containsKey("Milk");
-        if (hasItem) {
-            manager.removeItem("Milk");
-        }
-
-        System.out.println("\nUpdated Grocery list:");
-        i = 0;
-        for (Map.Entry<String, Double> entry : manager.displayList().entrySet()) {
-            String item = entry.getKey();
-            double cost = entry.getValue();
-            i++;
-            System.out.println(i + ". " + item + " " + cost + "€");
-        }
+        manager.displayGroceryList();
 
         manager.calculateTotalCost();
     }

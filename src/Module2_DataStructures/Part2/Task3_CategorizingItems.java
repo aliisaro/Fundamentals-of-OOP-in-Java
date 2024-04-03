@@ -10,28 +10,41 @@ public class Task3_CategorizingItems {
         groceryList.put(item, category);
     }
 
-
     public void removeItem(String item) {
-        System.out.println("\nRemoving " + item + " from the list...");
+        System.out.println("\nRemoving '" + item + "' from the list...");
         groceryList.remove(item);
 
     }
 
+    public void displayGroceryList() {
+        System.out.println("\nGrocery list");
+        int i = 1;
+        for (Map.Entry<String, String> entry : groceryList.entrySet()) {
+            String item = entry.getKey();
+            String itemCategory = entry.getValue();
+            System.out.println(i + ". " + item + ", " +itemCategory);
+            i++;
+        }
+    }
+
     public void displayByCategory(String category) {
-        System.out.println("\nItems in the " + category + " category:");
-        int i = 0;
+        System.out.println("\nItems in the '" + category + "' category:");
+        int i = 1;
         for (Map.Entry<String, String> entry : groceryList.entrySet()) {
             String item = entry.getKey();
             String itemCategory = entry.getValue();
             if (itemCategory.equalsIgnoreCase(category)) {
-                i++;
                 System.out.println(i + ". " + item);
+                i++;
             }
         }
     }
 
     public void checkItem(String item) {
         boolean hasItem = groceryList.containsKey(item);
+        if (hasItem) {
+            groceryList.remove(item);
+        }
         System.out.print("\nIs " + item + " in the grocery list? " + hasItem);
     }
 
@@ -43,28 +56,7 @@ public class Task3_CategorizingItems {
         manager.addItemWithCategory("Bread", "bakery");
 
         System.out.println("Grocery list:");
-        int i = 0;
-        for (Map.Entry<String, String> entry : manager.groceryList.entrySet()) {
-            String item = entry.getKey();
-            String category = entry.getValue();
-            i++;
-            System.out.println(i + ". " + item + " (" + category + ")");
-        }
-
-        manager.checkItem("Milk");
-        boolean hasItem = manager.groceryList.containsKey("Milk");
-        if (hasItem) {
-            manager.removeItem("Milk");
-        }
-
-        System.out.println("\nUpdated Grocery list:");
-        i = 0;
-        for (Map.Entry<String, String> entry : manager.groceryList.entrySet()) {
-            String item = entry.getKey();
-            String category = entry.getValue();
-            i++;
-            System.out.println(i + ". " + item + " (" + category + ")");
-        }
+        manager.displayGroceryList();
 
         manager.displayByCategory("Fruits");
     }
