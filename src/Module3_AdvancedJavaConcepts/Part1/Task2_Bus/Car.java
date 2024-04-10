@@ -22,13 +22,19 @@ public class Car {
     }
 
     public void passengerEnter(int passengers) {
-        this.currentPassengers = getCurrentPassengers() + passengers;
-        System.out.println(passengers + " passengers ENTER car: " + getTypeName() + ".");
+        this.currentPassengers +=  passengers;
+        System.out.println(passengers + " passengers ENTER car: " + this.typeName + ".");
     }
 
     public void passengerExit(int passengers) {
-        setCurrentPassengers(getCurrentPassengers() - passengers);
-        System.out.println(passengers + " passengers EXIT car: " + getTypeName() + ".");
+        if (passengers > this.currentPassengers) {
+            passengers = this.currentPassengers;
+            System.out.println(passengers + " passengers EXIT car: " + this.typeName + ".");
+            setCurrentPassengers(0);
+        } else {
+            System.out.println(passengers + " passengers EXIT car: " + this.typeName + ".");
+            setCurrentPassengers(this.currentPassengers - passengers);
+        }
     }
 }
 
@@ -45,7 +51,13 @@ public class Car {
 
         @Override
         public void passengerExit(int passengers) {
-            setCurrentPassengers(getCurrentPassengers() - passengers);
-            System.out.println(passengers + " passengers EXIT bus: " + getTypeName() + ".");
+            if (passengers > getCurrentPassengers()) {
+                passengers = getCurrentPassengers();
+                System.out.println(passengers + " passengers EXIT bus: " + getTypeName() + ".");
+                setCurrentPassengers(0);
+            } else {
+                System.out.println(passengers + " passengers EXIT bus: " + getTypeName() + ".");
+                setCurrentPassengers(getCurrentPassengers() - passengers);
+            }
         }
     }

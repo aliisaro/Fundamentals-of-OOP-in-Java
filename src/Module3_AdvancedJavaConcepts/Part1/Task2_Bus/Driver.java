@@ -7,12 +7,10 @@ public class Driver {
             System.out.println("\nInitial amount of passengers in " + bus.getTypeName() + ": " + bus.getCurrentPassengers());
             System.out.println("Initial amount of passengers in " + car.getTypeName() + ": " + car.getCurrentPassengers() + "\n");
 
-            bus.passengerEnter(5);
-            car.passengerEnter(1);
-            bus.passengerExit(2);
             bus.passengerEnter(10);
+            bus.passengerExit(7);
+            car.passengerEnter(2);
             car.passengerExit(2);
-            bus.passengerExit(6);
 
             System.out.println("\nFinal amount of passengers in " + bus.getTypeName() + ": " + bus.getCurrentPassengers());
             System.out.println("Final amount of passengers in " + car.getTypeName() + ": " + car.getCurrentPassengers());
