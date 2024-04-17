@@ -41,7 +41,7 @@ public class Library {
         if (!book.isReserved()) {
             book.setReserved(true);
             member.addReservedBook(book);
-            System.out.println("Book '" + book.getTitle() + "' reserved successfully by '" + member.getName() + ".");
+            System.out.println("Book '" + book.getTitle() + "' reserved successfully by '" + member.getName() + "'.");
         } else {
             System.out.println("Book is already reserved.");
         }
@@ -51,14 +51,14 @@ public class Library {
         if (book.isReserved() && member.hasReservedBook(book)) {
             book.setReserved(false);
             member.removeReservedBook(book);
-            System.out.println("Reservation of book '" + book.getTitle() + "' canceled successfully by member '" + member.getName() + ".");
+            System.out.println("Reservation of book '" + book.getTitle() + "' canceled successfully by member '" + member.getName() + "'.");
         } else {
             System.out.println("Book '" + book.getTitle() + "' was not reserved by this member.");
         }
     }
 
     public void displayReservedBooks(LibraryMember member) {
-        System.out.println("Reserved books for " + member.getName() + ":");
+        System.out.println("Reserved books for member '" + member.getName() + "':");
         for (Book book : member.getReservedBooks()) {
             System.out.println(book.getTitle());
         }
