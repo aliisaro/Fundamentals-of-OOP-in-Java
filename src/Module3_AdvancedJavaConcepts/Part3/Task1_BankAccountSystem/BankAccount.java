@@ -32,6 +32,7 @@ public class BankAccount {
         BankAccount account2 = new BankAccount(2000);
 
         account1.deposit(500);
+        account2.deposit(1000);
         account2.withdraw(800);
 
         System.out.println("Account " + account1.getAccountNumber() + " balance: " + account1.getBalance());

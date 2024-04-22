@@ -17,5 +17,6 @@ public class Main {
         library.reserveBook(member, book);
         library.displayReservedBooks(member);
         library.cancelReservation(member, book);
+        library.displayReservedBooks(member);
     }
 }
