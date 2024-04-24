@@ -9,7 +9,7 @@ public class FirstThread extends Thread {
 
     @Override
     public void run() {
-        safeArray.addElement("Element 1");
-        System.out.println("Added Element 1 by " + Thread.currentThread().getName());
+        safeArray.addElement("Element");
+        System.out.println("Added Element by " + Thread.currentThread().getName());
     }
 }

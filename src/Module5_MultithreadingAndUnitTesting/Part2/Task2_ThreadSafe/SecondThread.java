@@ -9,7 +9,7 @@ public class SecondThread extends Thread {
 
     @Override
     public void run() {
-        safeArray.removeElement("Element 1");
-        System.out.println("Removed Element 1 by " + Thread.currentThread().getName());
+        safeArray.removeElement("Element");
+        System.out.println("Removed Element by " + Thread.currentThread().getName());
     }
 }
