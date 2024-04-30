@@ -62,6 +62,4 @@ The sum method takes two integers as arguments, adds them to the value and print
 The main method creates an instance of the Calculator class, calls the add method, 
 calls the resetCalculator method, prints the value of the calculator, generates random numbers and calls the sum method with those numbers, 
 and finally prints the value of the calculator. The output of the program will show the messages printed 
-by the methods and the final value of the calculator. 
-
-```
+by the methods and the final value of the calculator.
